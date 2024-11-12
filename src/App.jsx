@@ -9,9 +9,10 @@ import PromptTemplate from './pages/PromptTemplate';
 import Discover from './pages/Discover';
 import Profile from './pages/Profile';
 import UserInfoPage from './pages/UserInfoPage';
+import MessagesPage from './pages/MessagesPage';  // Added this import
 
 function App() {
-  const isAuthPage = window.location.pathname === '/login' || 
+  const isAuthPage = window.location.pathname === '/login' ||
                     window.location.pathname === '/signup';
   
   // Check if current path is user info page
@@ -46,11 +47,7 @@ function App() {
             <Route path="/user/:id" element={<UserInfoPage />} />
             
             {/* Messages Route */}
-            <Route path="/messages" element={
-              <div className="p-8">
-                <h1 className="text-4xl">Messages Page</h1>
-              </div>
-            } />
+            <Route path="/messages" element={<MessagesPage />} />
           </Routes>
         </div>
       </div>
